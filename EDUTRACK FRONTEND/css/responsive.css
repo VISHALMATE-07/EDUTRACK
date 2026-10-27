@@ -1,0 +1,34 @@
+/* ==========================================================================
+   EduTrack — Responsive rules
+   ========================================================================== */
+
+@media (max-width: 1080px){
+  .grid-4{ grid-template-columns: repeat(2, 1fr); }
+  .grid-3{ grid-template-columns: repeat(2, 1fr); }
+  .auth-visual{ display:none; }
+  .auth-form-side{ width:100%; }
+}
+
+@media (max-width: 900px){
+  .sidebar{ transform: translateX(-100%); box-shadow: var(--shadow-lg); }
+  .sidebar.open{ transform:none; }
+  .main-area{ margin-left:0; }
+  .hamburger{ display:flex; }
+  .sidebar-scrim{ display:block; position:fixed; inset:0; background:rgba(15,23,18,0.4); z-index:140; opacity:0; pointer-events:none; transition: opacity var(--transition); }
+  .sidebar-scrim.open{ opacity:1; pointer-events:auto; }
+  .topbar-search{ display:none; }
+  .profile-meta{ display:none; }
+}
+
+@media (max-width: 680px){
+  .grid-2, .grid-3, .grid-4{ grid-template-columns: 1fr; }
+  .page-wrap{ padding: var(--space-5) var(--space-4); }
+  .container{ padding: 0 var(--space-4); }
+  .role-pick{ grid-template-columns:1fr; }
+  .page-head-row{ flex-direction:column; align-items:flex-start; }
+  .modal{ padding: var(--space-6) var(--space-5); }
+  .notif-panel{ width: calc(100vw - 40px); max-width:340px; }
+  .h1{ font-size:26px; }
+}
+
+body{ overflow-x:hidden; }

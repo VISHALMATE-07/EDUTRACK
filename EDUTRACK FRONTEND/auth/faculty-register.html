@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faculty Registration — EduTrack</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/auth.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div class="auth-center-page">
+  <div style="width:100%;max-width:460px;">
+    <a href="choose-login.html" class="back-link">← Back</a>
+    <div class="brand" style="margin-bottom:24px;"><span class="mark">E</span><span>EduTrack</span></div>
+    <h2 class="h2">Create Your Faculty Account</h2>
+    <p class="subhead" style="margin-bottom:28px;">Set up your classrooms and start tracking student progress.</p>
+
+    <form id="register-form" novalidate>
+      <div class="field" data-required><label>Name</label><input class="input" id="name"><span class="error-msg">This field is required.</span></div>
+      <div class="field" data-required id="field-email"><label>Email</label><input class="input" id="email" type="email"><span class="error-msg">Enter a valid email address.</span></div>
+      <div class="grid grid-2">
+        <div class="field" data-required id="field-password"><label>Password</label><input class="input" id="password" type="password"><span class="error-msg">This field is required.</span></div>
+        <div class="field" data-required id="field-confirmPassword"><label>Confirm Password</label><input class="input" id="confirmPassword" type="password"><span class="error-msg">Passwords do not match.</span></div>
+      </div>
+      <div class="field" data-required><label>Department</label><input class="input" id="department" placeholder="e.g. Computer Science & Engineering"><span class="error-msg">This field is required.</span></div>
+      <div class="field" data-required><label>Faculty ID</label><input class="input" id="facultyId"><span class="error-msg">This field is required.</span></div>
+      <button class="btn btn-primary btn-block btn-lg" type="submit">Create Account</button>
+    </form>
+    <p class="auth-form-foot">Already have an account? <a href="faculty-login.html" style="color:var(--primary);font-weight:600;">Log in</a></p>
+  </div>
+</div>
+<script src="../js/common.js"></script>
+<script src="../js/auth.js"></script>
+<script>initRegisterForm('faculty');</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Help — EduTrack</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/marketing.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html"><div class="brand"><span class="mark">E</span><div><span>EduTrack</span><small>Track. Improve. Grow.</small></div></div></a>
+    <nav class="site-nav">
+      <a href="../index.html#why">Why EduTrack</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="site-header-actions">
+      <div id="theme-slot"></div>
+      <a href="../auth/choose-login.html" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="page-head" style="margin-bottom:40px;">
+      <h1 class="h1">Contact & Help</h1>
+      <p>Have a question about EduTrack? Send us a message or check the FAQ below.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="card" style="padding:32px;">
+        <h3 class="h4 mb-4">Send a Message</h3>
+        <form id="contact-form">
+          <div class="field" data-required><label>Name</label><input class="input" id="c-name"><span class="error-msg">Please enter your name.</span></div>
+          <div class="field" data-required><label>Email</label><input class="input" id="c-email"><span class="error-msg">Please enter a valid email.</span></div>
+          <div class="field" data-required><label>Topic</label>
+            <select class="input" id="c-topic"><option value="">Select a topic</option><option>Account access</option><option>Bug report</option><option>Feature suggestion</option><option>Something else</option></select>
+            <span class="error-msg">Please select a topic.</span>
+          </div>
+          <div class="field" data-required><label>Message</label><textarea class="input" rows="4" id="c-message"></textarea><span class="error-msg">Please enter a message.</span></div>
+          <button class="btn btn-primary btn-block" type="submit">Send Message</button>
+        </form>
+        <div class="alert alert-success mt-4" id="contact-success" style="display:none;">Message sent — this is a demo, so it isn't actually delivered yet.</div>
+      </div>
+
+      <div>
+        <div class="card mb-5" style="padding:28px;">
+          <h3 class="h4 mb-3">Support Information</h3>
+          <p class="text-sm text-soft mb-2"><strong>Email:</strong> support@edutrack.demo</p>
+          <p class="text-sm text-soft mb-2"><strong>Response time:</strong> Within 1–2 business days (demo)</p>
+          <p class="text-sm text-soft">For account-specific issues, use the same email you registered with.</p>
+        </div>
+        <div class="card" style="padding:28px;">
+          <h3 class="h4 mb-3">Common Help Topics</h3>
+          <div class="stack gap-2">
+            <a class="dropdown-item" style="padding:10px 4px;" href="#">Resetting your password</a>
+            <a class="dropdown-item" style="padding:10px 4px;" href="#">Joining a classroom with a class code</a>
+            <a class="dropdown-item" style="padding:10px 4px;" href="#">Updating your career goal</a>
+            <a class="dropdown-item" style="padding:10px 4px;" href="#">Uploading documents to your vault</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head mt-7"><div class="h2">Frequently Asked Questions</div></div>
+    <div id="faq-list">
+      <div class="faq-item"><div class="faq-q">Is EduTrack free to use? <span class="chev">▾</span></div><div class="faq-a">Yes — this is currently a prototype, and all demo accounts are free to explore.</div></div>
+      <div class="faq-item"><div class="faq-q">Is my data real or stored anywhere? <span class="chev">▾</span></div><div class="faq-a">No. This version of EduTrack is a frontend-only prototype using demo data. Nothing you enter is saved to a real server yet.</div></div>
+      <div class="faq-item"><div class="faq-q">How do I switch between student and faculty view? <span class="chev">▾</span></div><div class="faq-a">Each role has its own login. Log out and choose the other role from the "Choose Login Type" screen.</div></div>
+      <div class="faq-item"><div class="faq-q">Can I use EduTrack on my phone? <span class="chev">▾</span></div><div class="faq-a">Yes, the entire interface is responsive and designed to work well on mobile, tablet and desktop.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container"><div class="footer-bottom"><span>© 2026 EduTrack. A student project prototype.</span><a href="../index.html" class="text-sm" style="color:var(--primary);font-weight:600;">Back to Home</a></div></div>
+</footer>
+
+<script src="../js/common.js"></script>
+<script>
+  EduTrack.initTheme();
+  document.getElementById('theme-slot').innerHTML = EduTrack.themeSwitchHTML();
+  EduTrack.bindThemeSwitch();
+
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click', ()=>{
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!open) item.classList.add('open');
+    });
+  });
+
+  document.getElementById('contact-form').addEventListener('submit', (e)=>{
+    e.preventDefault();
+    let valid = true;
+    document.querySelectorAll('#contact-form .field[data-required]').forEach(f=>{
+      const input = f.querySelector('input, select, textarea');
+      f.classList.remove('has-error');
+      if(!input.value.trim()){ f.classList.add('has-error'); valid = false; }
+    });
+    if(!valid) return;
+    document.getElementById('contact-success').style.display = 'flex';
+    document.getElementById('contact-form').reset();
+  });
+</script>
+</body>
+</html>

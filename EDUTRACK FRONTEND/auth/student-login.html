@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Login — EduTrack</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/auth.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div class="auth-shell">
+  <div class="auth-visual">
+    <div class="brand"><span class="mark">E</span><div><span>EduTrack</span><small>Track. Improve. Grow.</small></div></div>
+    <div class="auth-visual-copy">
+      <h2>See your whole academic picture, at a glance.</h2>
+      <p>Attendance, marks, assignments, career progress and internships — tracked together, not scattered across five apps.</p>
+    </div>
+    <div class="auth-stat-row">
+      <div><div class="num">8.4</div><div class="lbl">Sample CGPA</div></div>
+      <div><div class="num">5</div><div class="lbl">Subjects tracked</div></div>
+      <div><div class="num">68%</div><div class="lbl">Internship ready</div></div>
+    </div>
+  </div>
+  <div class="auth-form-side">
+    <div class="auth-card">
+      <a href="choose-login.html" class="back-link">← Back</a>
+      <div class="brand"><span class="mark">E</span><span>EduTrack</span></div>
+      <h2 class="h2">Student Login</h2>
+      <p class="subhead">Welcome back — let's check your progress.</p>
+
+      <div class="demo-hint">Demo credentials: <code>student@edutrack.demo</code> / <code>student123</code></div>
+
+      <form id="login-form" novalidate>
+        <div class="field" id="field-email"><label>Email</label><input class="input" id="email" type="email" placeholder="you@college.edu"><span class="error-msg">Enter a valid email address.</span></div>
+        <div class="field" id="field-password"><label>Password</label><input class="input" id="password" type="password" placeholder="••••••••"><span class="error-msg">Password is required.</span></div>
+        <div class="flex-between mb-5">
+          <label class="checkbox-row"><input type="checkbox"> Remember me</label>
+          <a href="forgot-password.html" class="text-sm" style="color:var(--primary);font-weight:600;">Forgot password?</a>
+        </div>
+        <button class="btn btn-primary btn-block btn-lg" type="submit">Login as Student</button>
+      </form>
+      <p class="auth-form-foot">Don't have an account? <a href="student-register.html" style="color:var(--primary);font-weight:600;">Register here</a></p>
+    </div>
+  </div>
+</div>
+<script src="../js/common.js"></script>
+<script src="../js/auth.js"></script>
+<script>initStudentLoginForm();</script>
+</body>
+</html>

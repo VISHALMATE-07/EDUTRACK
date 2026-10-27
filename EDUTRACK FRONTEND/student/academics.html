@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academics — EduTrack</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<script src="../js/common.js"></script>
+<script src="../js/data.js"></script>
+<script src="../js/student.js"></script>
+<script>
+  EduTrack.mount({
+    role: 'student', active: 'academics.html',
+    pageTitle: 'Academic Progress', pageDesc: 'Monitor your performance, attendance and pending academic work.',
+    renderContent: renderStudentAcademics
+  });
+</script>
+</body>
+</html>

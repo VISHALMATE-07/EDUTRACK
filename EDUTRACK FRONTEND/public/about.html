@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About EduTrack</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/marketing.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html"><div class="brand"><span class="mark">E</span><div><span>EduTrack</span><small>Track. Improve. Grow.</small></div></div></a>
+    <nav class="site-nav">
+      <a href="../index.html#why">Why EduTrack</a>
+      <a href="../index.html#personas">Students & Faculty</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="site-header-actions">
+      <div id="theme-slot"></div>
+      <a href="../auth/choose-login.html" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="about-hero">
+      <span class="badge badge-info">About Us</span>
+      <h1 class="h1 mt-3">A clearer way to see your academic and career progress.</h1>
+      <p class="text-soft mt-3" style="max-width:60ch;">EduTrack was built around a simple idea: students and faculty shouldn't need five different tools — a portal for marks, a spreadsheet for attendance, a group chat for announcements, a notebook for career planning — just to understand how things are going.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head"><div class="h2">Our Mission</div><p>Give every student a clear picture of their academic standing and career readiness, and give every faculty member the visibility to support their class effectively.</p></div>
+    <div class="value-grid">
+      <div class="card feature-card"><div class="feature-ic" id="ic-book"></div><h3>Academic + Career, Together</h3><p class="text-sm text-soft">Grades and attendance tell only half the story. EduTrack connects academic performance with career skill-building, so progress in one area supports the other.</p></div>
+      <div class="card feature-card"><div class="feature-ic" id="ic-users"></div><h3>Student & Faculty Collaboration</h3><p class="text-sm text-soft">Classrooms keep announcements, material and assignments in sync between students and faculty, instead of scattered across channels.</p></div>
+      <div class="card feature-card"><div class="feature-ic" id="ic-sparkle"></div><h3>Toward Intelligent Guidance</h3><p class="text-sm text-soft">This prototype includes a preview of an AI Advisor experience — the groundwork for guidance that's grounded in each student's real data, once connected to a live AI API.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card" style="padding:40px;">
+      <div class="flex-between" style="align-items:flex-start;flex-wrap:wrap;gap:24px;">
+        <div style="max-width:480px;"><h2 class="h2 mb-3">Currently a frontend prototype</h2><p class="text-soft text-sm">EduTrack is currently a frontend-only demo built with HTML, CSS and vanilla JavaScript. It uses realistic demo data throughout. The architecture is designed to connect cleanly to a Node.js + Express backend, Firebase Authentication, Firestore and Firebase Storage as the project grows.</p></div>
+        <a href="../auth/choose-login.html" class="btn btn-primary btn-lg">Try the Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom"><span>© 2026 EduTrack. A student project prototype.</span><a href="../index.html" class="text-sm" style="color:var(--primary);font-weight:600;">Back to Home</a></div>
+  </div>
+</footer>
+
+<script src="../js/common.js"></script>
+<script>
+  EduTrack.initTheme();
+  document.getElementById('theme-slot').innerHTML = EduTrack.themeSwitchHTML();
+  EduTrack.bindThemeSwitch();
+  ['book','users','sparkle'].forEach(name=> document.getElementById('ic-'+name).innerHTML = EduTrack.icon(name, 20));
+</script>
+</body>
+</html>

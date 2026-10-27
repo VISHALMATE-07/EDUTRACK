@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In — EduTrack</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/auth.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div class="auth-center-page">
+  <div style="width:100%;max-width:680px;">
+    <div style="text-align:center;margin-bottom:40px;">
+      <div class="brand" style="justify-content:center;margin-bottom:20px;"><span class="mark">E</span><div style="text-align:left;"><span>EduTrack</span><small>Track. Improve. Grow.</small></div></div>
+      <h1 class="h2">How would you like to log in?</h1>
+      <p class="text-soft mt-2">Choose your role to continue to the right portal.</p>
+    </div>
+    <div class="role-pick">
+      <a href="student-login.html" class="role-card">
+        <div class="role-ic" id="ic-student"></div>
+        <h3>Student</h3>
+        <p>Track your academic and career journey.</p>
+        <span class="btn btn-primary btn-block">Student Login</span>
+      </a>
+      <a href="faculty-login.html" class="role-card">
+        <div class="role-ic" id="ic-faculty"></div>
+        <h3>Faculty</h3>
+        <p>Manage classrooms and student progress.</p>
+        <span class="btn btn-primary btn-block">Faculty Login</span>
+      </a>
+    </div>
+    <p class="text-center text-sm text-soft mt-6" style="text-align:center;">New to EduTrack? <a href="student-register.html" style="color:var(--primary);font-weight:600;">Create a student account</a> or <a href="faculty-register.html" style="color:var(--primary);font-weight:600;">register as faculty</a>.</p>
+    <p class="text-center mt-4" style="text-align:center;"><a href="../index.html" class="back-link" style="justify-content:center;">← Back to Home</a></p>
+  </div>
+</div>
+<script src="../js/common.js"></script>
+<script>
+  EduTrack.initTheme();
+  document.getElementById('ic-student').innerHTML = EduTrack.icon('user', 26);
+  document.getElementById('ic-faculty').innerHTML = EduTrack.icon('briefcase', 26);
+</script>
+</body>
+</html>

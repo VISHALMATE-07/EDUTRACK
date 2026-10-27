@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile & Settings — EduTrack Faculty</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<script src="../js/common.js"></script>
+<script src="../js/data.js"></script>
+<script src="../js/faculty.js"></script>
+<script>
+  EduTrack.mount({
+    role: 'faculty', active: 'settings.html',
+    pageTitle: 'Profile & Settings', pageDesc: 'Manage your account and notification preferences.',
+    renderContent: renderFacultySettings
+  });
+</script>
+</body>
+</html>
